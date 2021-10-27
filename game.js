@@ -19,5 +19,14 @@ let buttonAudio = new Audio("sounds/" +randomChosenColour +".mp3");
 buttonAudio.play();
 }
 
+let gameStarted = false;
+let level = 0;
 
+document.onkeypress = function() {
+    if (gameStarted == false) {
+    nextSequence();
+    gameStarted = true;
+    document.getElementsById("level-title").innerHTML = "Game Started";
+    };
+};
 
